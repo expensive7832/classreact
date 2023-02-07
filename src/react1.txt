@@ -1,0 +1,41 @@
+import img1 from "./assets/react.svg"
+
+function App(){
+
+
+    const handleClick = () =>{
+        for(let i = 0; i < 10; i++){
+            alert(`please forgive me ${i}`)
+        }
+    }
+
+    return(
+        <>
+            <nav className="navbar navbar-expand-md bg-dark navbar-dark">
+                <a className="text-danger" href="">Logo</a>
+
+                <button className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#link">
+                    <span className="navbar-toggler-icon"></span>
+                </button>
+
+
+               <div className="navbar-collapse collapse" id="link">
+               <ul className="navbar-nav m-auto">
+                    <li className="nav-item"><a className="nav-link" href="">About</a></li>
+                    <li className="nav-item"><a href="" className="nav-link">Contact</a></li>
+                </ul>
+               </div>
+            </nav>
+
+
+            <div className="banner">
+                <img src={img1} alt="" />
+                <button onDoubleClick={() => handleClick() } className="btn btn-primary">click</button>
+            </div>
+
+        </>
+    )
+}
+
+
+export default App
