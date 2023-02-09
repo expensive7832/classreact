@@ -5,6 +5,7 @@ import { Spinner } from "reactstrap"
 const Home = React.lazy(() => import("./Pages/Home"))
 const Signup = React.lazy(() => import("./Pages/SIgnup"))
 const Login = React.lazy(() => import("./Pages/Login"))
+const Landing = React.lazy(() => import("./Pages/Landing"))
 
 
 
@@ -17,7 +18,8 @@ function App(){
         }>
             <BrowserRouter>
                 <Routes>
-                    <Route path="/" element={ <Home/> }/>
+                    <Route path="/" element={ <Landing/> }/>
+                    <Route path="/home" element={<Home/>}/>
                     <Route path="/signup" element={ <Signup/> }/>
                     <Route path="/login" element={ <Login/> }/>
                 </Routes>
